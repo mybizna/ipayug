@@ -13,7 +13,25 @@ return new class extends Migration
     {
         Schema::create('ipayug_ipayug', function (Blueprint $table) {
             $table->id();
-            
+
+            $table->string('item_id')->nullable();
+            $table->string('status')->nullable();
+            $table->string('txncd')->nullable();
+            $table->string('ivm')->nullable();
+            $table->string('qwh')->nullable();
+            $table->string('afd')->nullable();
+            $table->string('poi')->nullable();
+            $table->string('uyt')->nullable();
+            $table->string('ifd')->nullable();
+            $table->string('agd')->nullable();
+            $table->string('mc')->nullable();
+            $table->string('p1')->nullable();
+            $table->string('p2')->nullable();
+            $table->string('p3')->nullable();
+            $table->string('p4')->nullable();
+            $table->foreignId('payment_id')->nullable();
+            $table->boolean('is_processed')->nullable();
+
             $table->timestamps();
         });
     }

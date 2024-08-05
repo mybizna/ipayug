@@ -2,7 +2,6 @@
 
 namespace Modules\Ipayug\Entities;
 
-use Illuminate\Database\Schema\Blueprint;
 use Modules\Base\Entities\BaseModel;
 
 class Ipayug extends BaseModel
@@ -20,39 +19,5 @@ class Ipayug extends BaseModel
      * @var string
      */
     protected $table = "ipayug";
-
-    /**
-     * List of fields to be migrated to the datebase when creating or updating model during migration.
-     *
-     * @param Blueprint $table
-     * @return void
-     */
-    public function fields(Blueprint $table = null): void
-    {
-        $this->fields = $table ?? new Blueprint($this->table);
-
-        $this->fields->increments('id')->html('hidden');
-        $this->fields->string('item_id')->nullable()->html('text');
-        $this->fields->string('status')->nullable()->html('text');
-        $this->fields->string('txncd')->nullable()->html('text');
-        $this->fields->string('ivm')->nullable()->html('text');
-        $this->fields->string('qwh')->nullable()->html('text');
-        $this->fields->string('afd')->nullable()->html('text');
-        $this->fields->string('poi')->nullable()->html('text');
-        $this->fields->string('uyt')->nullable()->html('text');
-        $this->fields->string('ifd')->nullable()->html('text');
-        $this->fields->string('agd')->nullable()->html('text');
-        $this->fields->string('mc')->nullable()->html('text');
-        $this->fields->string('p1')->nullable()->html('text');
-        $this->fields->string('p2')->nullable()->html('text');
-        $this->fields->string('p3')->nullable()->html('text');
-        $this->fields->string('p4')->nullable()->html('text');
-        $this->fields->foreignId('payment_id')->nullable()->html('recordpicker')->relation(['payment']);
-        $this->fields->boolean('is_processed')->nullable()->html('switch');
-    }
-
-
-
-
 
 }
