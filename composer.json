@@ -26,7 +26,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Modules\\Ipayug\\": ""
+      "Modules\\Ipayug\\": "app/",
+      "Modules\\Ipayug\\Database\\Factories\\": "database/factories/",
+      "Modules\\Ipayug\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Ipayug\\Tests\\": "tests/"
     }
   }
 }
