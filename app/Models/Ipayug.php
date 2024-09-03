@@ -6,6 +6,7 @@ use Modules\Base\Models\BaseModel;
 
 class Ipayug extends BaseModel
 {
+
     /**
      * The fields that can be filled
      *
@@ -19,5 +20,4 @@ class Ipayug extends BaseModel
      * @var string
      */
     protected $table = "ipayug";
-
 }
