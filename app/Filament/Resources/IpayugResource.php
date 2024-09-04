@@ -2,20 +2,22 @@
 
 namespace Modules\Ipayug\Filament\Resources;
 
-use Modules\Ipayug\Filament\Resources\IpayugResource\Pages;
-use Modules\Ipayug\Filament\Resources\IpayugResource\RelationManagers;
-use Modules\Ipayug\Models\Ipayug;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Ipayug\Filament\Resources\IpayugResource\Pages;
+use Modules\Ipayug\Models\Ipayug;
 
 class IpayugResource extends Resource
 {
     protected static ?string $model = Ipayug::class;
+
+    protected static ?string $slug = 'ipayug/ipayug';
+
+    protected static ?string $navigationGroup = 'Gateway';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

@@ -9,7 +9,7 @@ class IpayugServiceProvider extends ServiceProvider
 {
     protected string $moduleName = 'Ipayug';
 
-    protected string $moduleNameLower = 'Ipayug';
+    protected string $moduleNameLower = 'ipayug';
 
     /**
      * Boot the application events.
