@@ -19,5 +19,5 @@ class Ipayug extends BaseModel
      *
      * @var string
      */
-    protected $table = "ipayug";
+    protected $table = "ipayug_ipayug";
 }
