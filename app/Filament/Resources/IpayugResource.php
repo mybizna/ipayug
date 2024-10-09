@@ -3,15 +3,12 @@
 namespace Modules\Ipayug\Filament\Resources;
 
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Modules\Ipayug\Filament\Resources\IpayugResource\Pages;
+use Modules\Base\Filament\Resources\BaseResource;
 use Modules\Ipayug\Models\Ipayug;
 
-class IpayugResource extends Resource
+class IpayugResource extends BaseResource
 {
     protected static ?string $model = Ipayug::class;
 
@@ -50,27 +47,4 @@ class IpayugResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListIpayugs::route('/'),
-            'create' => Pages\CreateIpayug::route('/create'),
-            'edit' => Pages\EditIpayug::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
 }
