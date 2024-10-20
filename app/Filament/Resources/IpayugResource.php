@@ -15,9 +15,11 @@ class IpayugResource extends BaseResource
 
     protected static ?string $slug = 'ipayug/ipayug';
 
-    protected static ?string $navigationGroup = 'Gateway';
+    protected static ?string $navigationGroup = 'Account';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationParentItem = 'Gateway';
 
     public static function form(Form $form): Form
     {
