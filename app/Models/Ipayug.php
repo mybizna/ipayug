@@ -24,7 +24,6 @@ class Ipayug extends BaseModel
 
     public function migration(Blueprint $table): void
     {
-        $table->id();
 
         $table->string('item_id')->nullable();
         $table->string('status')->nullable();
