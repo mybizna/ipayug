@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Session;
 
-class IpayugController extends Controller
+use Modules\Base\Http\Controllers\BaseController;
+class IpayugController extends BaseController
 {
     public function index(Request $request)
     {
@@ -62,7 +63,7 @@ class IpayugController extends Controller
             'status' => 200,
             'message' => $message,
         ];
-        
+
         return JsonResponse::create($response);
     }
 }
